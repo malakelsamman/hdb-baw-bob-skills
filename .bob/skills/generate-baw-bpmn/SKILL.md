@@ -1,16 +1,16 @@
 ---
 name: generate-baw-bpmn
-description: Generates BPMN 2.0 XML that imports cleanly into IBM Business Automation Workflow (BAW) — processes and complex business object variables (via a bundled XSD) — by writing a process JSON and running a bundled deterministic generator that emits BAW's own export dialect and packages the .zip the import wizards expect. Use whenever the user wants a BPMN file for BAW, asks to "generate BPMN," "create a .bpmn I can import," "turn this workflow into a BAW process/service flow," mentions BPMN import errors or elements disappearing on import, or has a process source in any form — a chat description, a requirements/BRD/blueprint document, an SOP, meeting notes, or an earlier blueprint parse — and needs the importable XML. Also triggers on conversational process descriptions like "I want to model a workflow for…" or "help me design a process for…".
+description: Generates IBM Business Automation Workflow (BAW) process artifacts in one of two output formats. (1) BPMN 2.0 XML — processes and complex business object variables (via a bundled XSD) — by writing a process JSON and running a bundled deterministic generator that emits BAW's own export dialect and packages the .zip the import wizards expect; human tasks become generated inline client-side human services. (2) A native Traditional BAW process app .twx that includes the human services, Coaches, views, business objects and theme, built from the bundled TWX generator under twx/. Choose the TWX format whenever the user wants Coaches, forms, views or screens in the generated file. Use whenever the user wants a BPMN file for BAW, asks to "generate BPMN," "create a .bpmn I can import," "turn this workflow into a BAW process/service flow," mentions BPMN import errors or elements disappearing on import, asks for a TWX or "process app with coaches/forms/views", or has a process source in any form — a chat description, a requirements/BRD/blueprint document, an SOP, meeting notes, or an earlier blueprint parse — and needs the importable XML. Also triggers on conversational process descriptions like "I want to model a workflow for…" or "help me design a process for…".
 license: Apache-2.0
-compatibility: "IBM BAW 22.x and later; IBM CP4BA 22.x and later"
+compatibility: "BPMN + zip option: IBM BAW 22.x and later; IBM CP4BA 22.x and later. TWX with Coaches option: validated on Traditional BAW 8.6.11 only; BAW 24.0.x is untested."
 allowed-tools:
   - Read
   - Edit
   - Bash
 metadata:
-  version: "1.0.0"
-  display_name: Generate BAW BPMN
-  short_description: Generate importable BPMN 2.0 XML files and bundled XSD for IBM BAW from any process description, document, or chat input.
+  version: "1.1.0"
+  display_name: Generate BAW BPMN / TWX
+  short_description: Generate importable BPMN 2.0 XML (zip) or a native process app TWX with human services and Coaches for IBM BAW from any process description, document, or chat input.
   author: IBM BAW Team
 ---
 
@@ -34,6 +34,47 @@ The reliability comes from three deliberate choices:
 Ids are derived deterministically (uuid5) from the config, so regenerating the same
 config yields byte-identical XML and every `sourceRef`/`targetRef` is guaranteed to
 resolve.
+
+## Output formats — ask once, before generating
+
+This skill produces one of two deliverables. Decide which one before Phase 4, and
+record the choice in the plan.
+
+| | **BPMN + zip** (default) | **TWX with Coaches** |
+|---|---|---|
+| File | `.bpmn` (+ `.xsd`) in a `.zip` | one `.twx` process app |
+| Human tasks | Generated inline human service with a default Coach, to be customized in Process Designer | Native User Task connected to a separate human service (CSHS) with a designed Coach |
+| Business objects | XSD sidecar | Native process-app objects (supported subset) |
+| Theme | None | Embedded toolkit with a native theme |
+| Import | Workflow Center / Business Automation Studio import wizards | Workflow Center → Import Process App |
+| Workflow | Steps 1–6 below | [twx/TWX_WORKFLOW.md](twx/TWX_WORKFLOW.md) |
+
+**How to choose.** Use **TWX with Coaches** when the user mentions Coaches, forms,
+views, screens, fields on a task, a theme, a `.twx`, or says they need more than a
+skeleton. Use **BPMN + zip** when they only need the process structure, service
+flows, or a file for the BPMN import wizard. If it is not clear, ask one question:
+
+> Do you want the BPMN zip (process structure; you design the Coaches in Process Designer), or a TWX process app that already includes the human services and Coaches?
+
+**If the user picks TWX with Coaches**, first ask which BAW version they target (see "Target version check" in [twx/TWX_WORKFLOW.md](twx/TWX_WORKFLOW.md)) and tell them the result of that check before building. Phases 1–3 above still apply (purpose,
+plan, data model). Then stop using steps 1–6 below and follow
+[twx/TWX_WORKFLOW.md](twx/TWX_WORKFLOW.md) from its first step. Key differences:
+
+- The process is defined by five contract files, not by the process JSON used for
+  BPMN, and the generator is `twx/scripts/baw_twx_generator.py`.
+- A review SVG is produced and the user must approve it before the TWX is built.
+- Controls outside the supported catalog (for example Tables other than the
+  standard comment history, Tabs, service-backed tables, reusable native
+  `coachView` artifacts) are reported as `UNSUPPORTED`, not silently simplified.
+  Tell the user which parts they must finish in Process Designer.
+- Native Business Objects the serializer cannot emit are preserved in the
+  contracts and reported as `UNSUPPORTED`.
+- No server is contacted. Importing is the user's step.
+
+**Version status of the TWX option.** The TWX generator was built and structurally validated against Traditional BAW 8.6.11 only. It stamps the package as 8.6.11 and links the 8.6.0.0 System Data and UI Toolkit snapshots. Compatibility with BAW 24.0.x is **not yet confirmed**. Until a v24 import has been tested, treat TWX output for a v24 target as a pilot, import it into a development environment only, and report the exact import result. The BPMN + zip option is not affected.
+
+Do not mix the two paths in one run: a TWX run does not also write the
+`.bpmn.json` config, and a BPMN run does not write contracts.
 
 ## Model completeness
 
@@ -293,7 +334,7 @@ If no → ask:
    five worked examples (linear, approval + escalation, parallel, service-flow-heavy
    with subprocess, and a full nested-business-object data model). Pattern-match the
    closest example instead of starting blank. The key modeling decisions:
-   - Human step → `userTask` (BAW generates a client-side human service for it).
+   - Human step → `userTask` (BAW generates a client-side human service for it). This is the BPMN path; for designed Coaches use the TWX output (see "Output formats").
    - Automated step → `serviceTask`. **This is how service flows are generated:** BAW
      creates one service flow per serviceTask, named after the task — so name each
      serviceTask exactly what its service flow should be called, and put the intended
@@ -407,16 +448,23 @@ Out of scope — hand off instead:
 - **Producing business object JSON artifacts, OpenAPI specs, or standalone data-model files from documents** →
   `generate-baw-business-objects`. (Reading a document to extract the *workflow* is in
   scope here; `generate-baw-business-objects` handles standalone Business Object artifact generation.)
-- **Packaging or managing TWX toolkits and deployments** → `generate-baw-business-objects` (for BO toolkits), `baw-deployment-manager`, or `version-lifecycle-manager`. **Deployment to a server is not
-  part of this skill under any prompt** — the deliverable is the .bpmn/.zip, which the
+- **Packaging or managing TWX toolkits and deployments** → `generate-baw-business-objects` (for BO toolkits), `baw-deployment-manager`, or `version-lifecycle-manager`. (The process-app `.twx` produced by the TWX with Coaches option is in scope; standalone toolkits are not.) **Deployment to a server is not
+  part of this skill under any prompt** — the deliverable is the .bpmn/.zip or the .twx, which the
   user imports through BAW's own UI.
-- **Coach widgets, UI components, or custom portals** → `create-baw-widget` or `create-baw-portal`.
-- **Hand-writing or hand-editing BPMN XML.** Change the config and regenerate —
+- **Custom Coach View widgets, UI components, or custom portals** → `create-baw-widget` or `create-baw-portal`. (Coaches built from the standard control catalog inside a TWX are in scope.)
+- **Hand-writing or hand-editing BPMN XML or TWX internals.** Change the config and regenerate —
   deterministic ids mean regeneration is always safe and diffs stay clean.
 
 ## Output format
 
-Report back:
+For the **TWX with Coaches** option, report as described in
+[twx/TWX_WORKFLOW.md](twx/TWX_WORKFLOW.md) ("Evidence and reporting"): each stage
+independently (flow approved, TWX generated and locally validated, BAW import
+accepted, BAW validation clean, runtime path tested), the path to the `.twx`, the
+SVG, the contracts, every `UNSUPPORTED` item, and every service marked `MISSING` or
+`PLACEHOLDER`. Do not call the app working until a runtime path has been executed.
+
+For the **BPMN + zip** option, report back:
 - **Process:** name, pattern (linear / approval / parallel / combination), element and
   flow counts.
 - **Service flows BAW will generate:** the serviceTask names (one flow each).

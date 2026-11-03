@@ -1,0 +1,58 @@
+{
+  "name": "enterprise-burgundy-theme",
+  "purpose": "Portable visual profile inspired by the supplied reference TWX; not a copy of source repository identifiers.",
+  "tokens": {
+    "primary": "#870052",
+    "primaryHover": "#3b0024",
+    "text": "#000203",
+    "pageBackground": "#F7F1F4",
+    "surface": "#ffffff",
+    "surfaceMuted": "#c8d2d2",
+    "accent": "#fde876",
+    "success": "#c8f08f",
+    "info": "#989898",
+    "warning": "#fde876",
+    "danger": "#ad1625",
+    "neutralDarkest": "#0d1111",
+    "neutralDarker": "#2d3737",
+    "neutral": "#586464",
+    "neutralLight": "#6d7777",
+    "neutralLightest": "#dfe9e9",
+    "border": "#a9b9b9",
+    "mutedText": "#4a5454"
+  },
+  "themeVariables": {
+    "bodyBackground": "#F7F1F4",
+    "fillDarker": "#586464",
+    "fillNormal": "#ffffff",
+    "activeColor": "#ffffff",
+    "activeBackground": "#870052",
+    "linkColor": "#870052",
+    "listGroupBackground": "#ffffff",
+    "listGroupBorder": "#dfe9e9",
+    "fontFamilySansSerif": "Helvetica Neue, Helvetica, Arial, sans-serif",
+    "fontSizeBase": "14px",
+    "lineHeightBase": "1",
+    "paddingBaseVertical": "6px",
+    "paddingBaseHorizontal": "12px",
+    "paddingSmallVertical": "5px",
+    "paddingSmallHorizontal": "10px",
+    "borderRadiusBase": "0px",
+    "borderRadiusLarge": "0px",
+    "borderRadiusSmall": "0px"
+  },
+  "layout": {
+    "fontFamily": "Helvetica Neue, Helvetica, Arial, sans-serif",
+    "responsiveDevices": ["LargeID", "SmallID"],
+    "defaultLabelPosition": "top",
+    "sectionStyle": "primary-header",
+    "actionStyle": "primary-filled"
+  },
+  "compatibility": {
+    "nativeThemeReference": null,
+    "requiresTargetResolution": true,
+    "copySourceRepositoryUuids": false,
+    "nativePackagingStatus": "EMBEDDED_THEME_TOOLKIT_IN_PROCESS_APP_TWX",
+    "selfContainedTarget": "one process-app TWX containing a generated Theme toolkit snapshot under toolkits/, with fresh repository IDs and a matching dependency reference"
+  }
+}

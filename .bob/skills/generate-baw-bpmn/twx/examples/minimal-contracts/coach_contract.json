@@ -1,0 +1,75 @@
+{
+  "contractType": "coach",
+  "contractVersion": "1.0",
+  "coaches": [
+    {
+      "id": "coach.submit",
+      "node_id": "submit",
+      "inputs": [
+        "requestName"
+      ],
+      "outputs": [
+        "requestName"
+      ],
+      "fields": [
+        {
+          "name": "requestName",
+          "label": "Request Name",
+          "type": "String",
+          "required": true,
+          "read_only": false,
+          "value_domain": "open",
+          "control": "text"
+        }
+      ],
+      "actions": [
+        "Submit"
+      ],
+      "history_view": {
+        "variable_name": "commentHistory",
+        "label": "Comment history"
+      }
+    },
+    {
+      "id": "coach.approve",
+      "node_id": "approve",
+      "inputs": [
+        "requestName"
+      ],
+      "outputs": [
+        "decision"
+      ],
+      "fields": [
+        {
+          "name": "requestName",
+          "label": "Request Name",
+          "type": "String",
+          "required": false,
+          "read_only": true,
+          "value_domain": "open",
+          "control": "text"
+        },
+        {
+          "name": "decision",
+          "label": "Decision",
+          "type": "String",
+          "required": true,
+          "read_only": false,
+          "options": [
+            "Approve",
+            "Reject"
+          ],
+          "value_domain": "finite",
+          "control": "single_select"
+        }
+      ],
+      "actions": [
+        "Submit"
+      ],
+      "history_view": {
+        "variable_name": "commentHistory",
+        "label": "Comment history"
+      }
+    }
+  ]
+}

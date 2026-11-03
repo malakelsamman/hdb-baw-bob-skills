@@ -6,15 +6,29 @@
 
 This skill turns any process description into a validated, import-ready BAW artifact: a `.bpmn`, an optional `.xsd` for business objects, a `.zip` that the BAW import wizards accept on first attempt, and a generated `README.md` with a Mermaid diagram and process documentation. It is intended for BAW developers and process authors who need importable BPMN without hand-writing XML. Use it whenever you want to model a workflow in BAW from a chat description, a requirements document, an SOP, meeting notes, or an existing process design — including when a previous import attempt lost elements or swimlanes.
 
+## Output formats
+
+The skill offers two deliverables and asks which one you want when it is not obvious:
+
+| | BPMN + zip (default) | TWX with Coaches |
+|---|---|---|
+| File | `.bpmn`, optional `.xsd`, `.zip` | one `.twx` process app |
+| Human tasks | Generated inline human service with a default Coach | Native User Task linked to a separate human service with a designed Coach |
+| Theme | None | Embedded toolkit with a native theme |
+| Generator | `scripts/generate_baw_bpmn.py` | `twx/scripts/baw_twx_generator.py` |
+| Workflow | SKILL.md steps 1–6 | `twx/TWX_WORKFLOW.md` |
+
+The TWX path has an approval gate: the skill produces a review SVG and does not build the `.twx` until you approve the flow. Anything outside the generator's supported control catalog (for example Tabs, service-backed tables, reusable native Coach views) is reported as `UNSUPPORTED` and must be finished in Process Designer. The skill never deploys; you import the `.twx` through Workflow Center.
+
 ## Setup and configuration
 
 - **Python 3 (any version)** — required to run `scripts/generate_baw_bpmn.py`. Uses the standard library only; no `pip install` needed.
-- No MCP server, API key, or environment variable is required.
+- No MCP server, API key, or environment variable is required. This also applies to the TWX with Coaches option.
 - The generator script is bundled inside the skill folder at `scripts/generate_baw_bpmn.py` and is invoked automatically during generation.
 
 ## Compatibility
 
-- **BAW import wizards only** — the deliverable is a `.zip` for Workflow Center → **Import Process App** or Process Designer → **File > Import**. The skill does not deploy to a running BAW server.
+- **BAW import wizards only** — the deliverable is a `.zip` for Workflow Center → **Import Process App** or Process Designer → **File > Import**, or a `.twx` for Workflow Center → **Import Process App** when the TWX with Coaches option is used. The skill does not deploy to a running BAW server.
 - **Single none start event per process** — BAW honors only one start event per process on import; multiple starts will be silently dropped.
 - **No BPMN DI / layout section** — BAW ignores incoming diagram layout and auto-arranges on import. Diagram layout is an expected post-import step in Process Designer.
 - **Supported constructs only** — the generator rejects elements outside IBM's documented import mapping (callActivity, signal/escalation/compensation events, data stores, pools) at validation time rather than letting BAW silently drop them on import.
@@ -78,12 +92,21 @@ This skill turns any process description into a validated, import-ready BAW arti
 
 ---
 
-### Out-of-scope redirect — coach or widget development
+### Generate a process app TWX with Coaches
+
+**Prompt:**
+> Here is the BRD for our account-opening process. I need a TWX I can import, with a Coach for each human task, not just the skeleton.
+
+**What to expect:** The skill chooses the TWX with Coaches option, walks the usual plan and data-model phases, writes the five contract files under `BAW_Process_Flows/contracts/`, produces a review SVG and stops for your approval, then builds and validates the `.twx`. It reports each stage separately and lists every `UNSUPPORTED` item and every placeholder service.
+
+---
+
+### Out-of-scope redirect — custom widget development
 
 **Prompt:**
 > Can you build the BAW coach UI for my expense approval process? I want a form with fields for expense type, amount, and receipt attachment.
 
-**What to expect:** The skill redirects this request to the `create-baw-widget` skill, which handles BAW coach view development.
+**What to expect:** For a standard form, the skill offers the TWX with Coaches option. A custom Coach View widget is redirected to the `create-baw-widget` skill.
 
 ---
 

@@ -27,9 +27,9 @@ contains any of `password`, `passwd`, `secret`, `apikey`, `api_key`, `token`,
 `authtoken`, `auth_token`, `credential`, `private_key` (case-insensitive).
 ```js
 // Example violations
-var password = "P@ssw0rd!";
-var apiKey = "sk-abc123";
-var dbSecret = 'prod-secret-XYZ';
+var password = "<literal-string>";
+var apiKey = "<literal-string>";
+var dbSecret = '<literal-string>';
 ```
 **Fix template:** Replace the literal with a BAW managed team/environment variable
 that the script reads through `tw.env.*`, or with a process variable that you

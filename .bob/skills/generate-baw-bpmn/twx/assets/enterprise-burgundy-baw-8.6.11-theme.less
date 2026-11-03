@@ -1,0 +1,1187 @@
+
+/* Migrated Variables - START */
+@bpm-checkbox-checked-bg:             transparent;
+@bpm-checkbox-checked-color:          @bpm-text-color-primary;
+@bpm-radio-color:                     @bpm-neutral-darkest;
+@bpm-radio-checked-color:             @bpm-neutral-darkest;
+@bpm-default-normal-fill-neutral:     @bpm-neutral;
+@bpm-default-normal-text-neutral:     darken( @bpm-default-normal-fill-neutral, 23%);
+@bpm-default-normal-fill-color:       @bpm-color-primary;
+@bpm-default-normal-border-neutral:   darken( @bpm-default-normal-fill-neutral, 6%);
+@bpm-default-darker-border-color:     @bpm-primary-darker-border-color;
+@bpm-primary-darker-border-color:     desaturate(darken(@bpm-color-primary, 13%), 29%);
+@bpm-primary-dark-border-color:       saturate(darken(@bpm-color-primary, 12%), 1%);
+@bpm-text-alternate-color:            lighten(@bpm-text-color, 100%);
+@bpm-default-light-fill-neutral:      @bpm-fill-normal;
+@bpm-default-light-text-neutral:      @bpm-fill-normal;
+@bpm-default-darkest-fill-neutral:    @bpm-neutral-darkest;
+@bpm-default-dark-border-neutral:     darken( @bpm-default-dark-fill-neutral, 11%);
+@bpm-default-dark-fill-neutral:       @bpm-neutral-dark;
+@bpm-default-darker-fill-color:       @bpm-color-primary-darker;
+@bpm-default-darker-fill-neutral:     @bpm-neutral-darker;
+@bpm-input-border-width:              1px;
+@bpm-input-border-width-focus:        1px;
+@bpm-input-shadow:                    transparent;
+@bpm-input-shadow-focus:              transparent;
+@bpm-input-alert-shadow:              transparent;
+@bpm-input-info-shadow:               transparent;
+@bpm-input-success-shadow:            transparent;
+@bpm-input-warning-shadow:            transparent;
+@bpm-input-primary-shadow:            transparent;
+@bpm-input-primary-color:             #555;
+@bpm-tooltip-bg-base:                 @bpm-neutral-darkest;
+@bpm-tooltip-color-base:              @bpm-fill-normal;
+@bpm-tooltip-border-radius:           @bpm-border-radius-base + 4px;
+@bpm-tooltip-font-size:               @bpm-font-size-small;
+@bpm-btn-default-border-alternate:    @bpm-active-color;
+@bpm-btn-default-outline:             transparent;
+@bpm-btn-default-focus-border:        @bpm-btn-default-border;
+@bpm-btn-primary-border-alternate:    desaturate(darken(@bpm-btn-primary-border, 8%), 29%);
+@bpm-btn-primary-outline:             transparent;
+@bpm-btn-primary-focus-border:        @bpm-btn-primary-border;
+@bpm-btn-alternate-border-alternate:  @bpm-active-color;
+@bpm-btn-alternate-outline:           transparent;
+@bpm-btn-alternate-focus-border:      @bpm-btn-alternate-border;
+@bpm-btn-success-border-alternate:    darken(@bpm-btn-success-border,6%);
+@bpm-btn-success-outline:             transparent;
+@bpm-btn-success-focus-border:        @bpm-btn-success-border;
+@bpm-btn-info-hover-color:            @bpm-text-color;
+@bpm-btn-info-border-alternate:       darken(@bpm-btn-info-border, 6%);
+@bpm-btn-info-outline:                transparent;
+@bpm-btn-info-focus-border:           @bpm-btn-info-border;
+@bpm-btn-warning-border-alternate:    darken(@bpm-btn-warning-border, 13%);
+@bpm-btn-warning-outline:             transparent;
+@bpm-btn-warning-focus-border:        @bpm-btn-warning-border;
+@bpm-btn-alert-border-alternate:      darken(@bpm-btn-alert-border, 3%);
+@bpm-btn-alert-outline:               transparent;
+@bpm-btn-alert-focus-border:          @bpm-btn-alert-border;
+@bpm-btn-outline-width:               0px;
+@bpm-btn-border-width:                3px solid;
+@bpm-section-header-active-border:    0px;
+@bpm-section-header-default-accent:   darken(@bpm-section-default-bg,2%);
+@bpm-section-header-primary-accent:   @bpm-section-primary-bg;
+@bpm-section-header-success-accent:   @bpm-section-success-bg;
+@bpm-section-header-info-accent:      @bpm-section-info-bg;
+@bpm-section-header-warning-accent:   @bpm-section-warning-bg;
+@bpm-section-header-alert-accent:     @bpm-section-alert-bg;
+@bpm-section-panel-border-top:        @bpm-section-default-border;
+@bpm-table-header-border-width:       1px;
+@bpm-table-header-border-style:       solid;
+@bpm-table-header-border-color:       @bpm-section-header-default-border;
+@bpm-table-footer-border-width:       1px;
+@bpm-table-footer-border-style:       solid;
+@bpm-table-footer-border-color:       @bpm-default-normal-border-neutral;
+@bpm-table-header-default-color:      @bpm-section-header-default-color;
+@bpm-table-header-default-bg:         @bpm-section-header-default-bg;
+@bpm-table-header-min-height:         40px;
+@bpm-table-page-size-margin-top:      initial;
+@bpm-table-row-height:                initial;
+@bpm-table-head-default-color:        initial;
+@bpm-table-head-default-bg:           #ffffff;
+@bpm-table-head-primary-color:        @bpm-section-header-primary-color;
+@bpm-table-head-light-color:          #555555;
+@bpm-table-head-info-color:           @bpm-section-header-info-color;
+@bpm-table-head-success-color:        @bpm-section-header-success-color;
+@bpm-table-head-warning-color:        @bpm-section-header-warning-color;
+@bpm-table-head-alert-color:          @bpm-section-header-alert-color;
+@bpm-table-border-top-width:          1px;
+@bpm-table-border-right-width:        @bpm-table-border-top-width;
+@bpm-table-border-bottom-width:       @bpm-table-border-top-width;
+@bpm-table-border-left-width:         @bpm-table-border-top-width;
+@bpm-table-row-border-top-width:      0px;
+@bpm-table-row-border-right-width:    @bpm-table-row-border-top-width;
+@bpm-table-row-border-bottom-width:   @bpm-table-row-border-top-width;
+@bpm-table-row-border-left-width:     @bpm-table-row-border-top-width;
+@bpm-table-content-border-top-width:  1px;
+@bpm-table-content-border-right-width:@bpm-table-content-border-top-width;
+@bpm-table-content-border-bottom-width:@bpm-table-content-border-top-width;
+@bpm-table-content-border-left-width: @bpm-table-content-border-top-width;
+@bpm-table-row-hover-bg:              transparent;
+@bpm-table-content-padding-left:      8px;
+@bpm-table-content-padding-right:     @bpm-table-content-padding-left;
+@bpm-table-content-padding-bottom:    @bpm-table-content-padding-left;
+@bpm-table-content-padding-top:       @bpm-table-content-padding-left;
+@bpm-table-content-border-color:      @bpm-default-normal-border-neutral;
+@bpm-table-page-sizer-bg:             #ffffff;
+@bpm-table-default-selection-bg:      transparent;
+@bpm-table-primary-selection-bg:      @bpm-color-primary;
+@bpm-table-light-selection-bg:        transparent;
+@bpm-table-info-selection-bg:         @bpm-color-info;
+@bpm-table-success-selection-bg:      @bpm-color-success;
+@bpm-table-warning-selection-bg:      @bpm-color-warning;
+@bpm-table-alert-selection-bg:        @bpm-section-alert-accent-bg;
+@bpm-table-light-add-bg:              darken(@bpm-fill-normal, 8%);
+@bpm-table-light-pagination-bg:       darken(@bpm-fill-normal, 8%);
+@bpm-table-sort-margin-top:           30%;
+@bpm-table-striped-row-hover-bg:      #f9f9f9;
+@bpm-nav-link-margin-bottom:          inherit;
+@bpm-nav-link-border:                 0px;
+@bpm-nav-tabs-border-bottom:          2px;
+@bpm-tabs-active-font:                600;
+@bpm-tabs-active-leter-spacing:       0.16px;
+@bpm-slider-horizontal-height:        19px;
+@bpm-slider-vertical-width:           19px;
+@bpm-slider-border-radius:            9999px;
+@bpm-slider-handle-height:            150%;
+@bpm-slider-handle-width:             19px;
+@bpm-slider-handle-bg:                @bpm-default-light-fill-neutral;
+@bpm-slider-handle-border:            darken(@bpm-default-dark-border-neutral, 7.5%);
+@bpm-slider-handle-alert-bg:          @bpm-slider-handle-bg;
+@bpm-slider-handle-alert-border:      @bpm-slider-handle-border;
+@bpm-slider-handle-warning-bg:        @bpm-slider-handle-bg;
+@bpm-slider-handle-warning-border:    @bpm-slider-handle-border;
+@bpm-slider-handle-success-bg:        @bpm-slider-handle-bg;
+@bpm-slider-handle-success-border:    @bpm-slider-handle-border;
+@bpm-slider-handle-info-bg:           @bpm-slider-handle-bg;
+@bpm-slider-handle-info-border:       @bpm-slider-handle-border;
+@bpm-dtp-text-color:                  @bpm-default-normal-text-neutral;
+@bpm-dtp-icons-color:                 @bpm-default-normal-fill-color;
+@bpm-dtp-background:                  @bpm-default-light-fill-neutral;
+@bpm-dtp-border-color:                @bpm-default-dark-border-neutral;
+@bpm-dtp-span-hover-bg:               lighten(@bpm-default-dark-fill-neutral, 50%);
+@bpm-dtp-span-hover-border:           @bpm-btn-primary-border;
+@bpm-dtp-header-bg:                   @bpm-default-normal-fill-color;
+@bpm-dtp-header-color:                @bpm-default-light-text-neutral;
+@bpm-dtp-header-bottom-border:        @bpm-default-darker-border-color;
+@bpm-dtp-date-active-bg:              @bpm-default-normal-fill-color;
+@bpm-dtp-date-active-color:           @bpm-default-light-text-neutral;
+@bpm-dtp-date-active-hover-color:     @bpm-default-light-text-neutral;
+@bpm-dtp-date-hover-bg:               @bpm-default-normal-fill-neutral;
+@bpm-dtp-date-today-bg:               @bpm-default-normal-fill-neutral;
+@bpm-dtp-date-today-color:            @bpm-default-normal-text-neutral;
+@bpm-dtp-date-today-highlight:        transparent;
+@bpm-dtp-grid-border-color:           @bpm-default-normal-border-neutral;
+@bpm-dtp-date-header-bg:              @bpm-default-darker-fill-color;
+@bpm-dtp-date-header-color:           @bpm-default-light-text-neutral;
+@bpm-dtp-month-header-bg:             @bpm-default-normal-fill-color;
+@bpm-dtp-month-header-border:         @bpm-default-darker-border-color;
+@bpm-dtp-month-hover-bg:              fade(@bpm-default-light-fill-neutral,20%);
+@bpm-dtp-disabled-span-decoration:    line-through;
+@bpm-dtp-time-meridian-bg:            @bpm-default-normal-fill-color;
+@bpm-dtp-success-header-color:        @bpm-color-success-darker;
+@bpm-dtp-info-header-color:           @bpm-color-info-darker;
+@bpm-dtp-danger-header-color:         @bpm-color-alert-darker;
+@bpm-dtp-warning-header-color:        @bpm-color-warning-darker;
+@bpm-dtp-success-month-header-bg:     @bpm-color-success;
+@bpm-dtp-info-month-header-bg:        @bpm-color-info;
+@bpm-dtp-warning-month-header-bg:     @bpm-color-warning;
+@bpm-dtp-danger-month-header-bg:      @bpm-color-alert;
+@bpm-dtp-success-date-today-color:    @bpm-default-normal-text-neutral;
+@bpm-dtp-info-date-today-color:       @bpm-default-normal-text-neutral;
+@bpm-dtp-danger-date-today-color:     @bpm-default-normal-text-neutral;
+@bpm-dtp-warning-date-today-color:    @bpm-default-normal-text-neutral;
+@bpm-dtp-week-bg:                     @bpm-default-normal-fill-neutral;
+@bpm-dtp-success-month-header-border: @bpm-border-normal;
+@bpm-dtp-info-month-header-border:    @bpm-border-normal;
+@bpm-dtp-warning-month-header-border: @bpm-border-normal;
+@bpm-dtp-danger-month-header-border:  @bpm-border-normal;
+@bpm-dtp-success-date-today-highlight:transparent;
+@bpm-dtp-info-date-today-highlight:   transparent;
+@bpm-dtp-danger-date-today-highlight: transparent;
+@bpm-dtp-warning-date-today-highlight:transparent;
+@bpm-dtp-date-disabled:               darken(@bpm-default-light-text-neutral, 40%);
+@bpm-dtp-date-today-decoration:       0rem;
+@bpm-breadcrumb-color:                darken( @bpm-default-dark-fill-neutral, 42%);
+@bpm-breadcrumb-font-size:            12px;
+@bpm-breadcrumb-seperator:            054;
+@bpm-breadcrumb-seperator-font:       FontAwesome;
+@bpm-breadcrumb-seperator-font-size:  7px;
+@bpm-breadcrumb-seperator-opacity:    0.7;
+@bpm-badge-font-weight:               600;
+@bpm-badge-primary-background:        @bpm-btn-primary-bg;
+@bpm-badge-primary-color:             @bpm-btn-primary-color;
+@bpm-badge-info-background:           @bpm-btn-info-bg;
+@bpm-badge-info-color:                @bpm-btn-info-color;
+@bpm-badge-success-background:        @bpm-btn-success-bg;
+@bpm-badge-success-color:             @bpm-btn-success-color;
+@bpm-badge-warning-background:        @bpm-btn-warning-bg;
+@bpm-badge-warning-color:             @bpm-btn-warning-color;
+@bpm-badge-danger-background:         @bpm-btn-alert-bg;
+@bpm-badge-danger-color:              @bpm-btn-alert-color;
+@bpm-badge-default-background:        @bpm-default-darker-fill-neutral;
+@bpm-badge-default-color:             @bpm-default-light-text-neutral;
+@bpm-notif-font-weight:               600;
+@bpm-notif-primary-background:        @bpm-btn-primary-bg;
+@bpm-notif-primary-color:             @bpm-btn-primary-color;
+@bpm-notif-info-background:           @bpm-btn-info-bg;
+@bpm-notif-info-color:                @bpm-btn-info-color;
+@bpm-notif-success-background:        @bpm-btn-success-bg;
+@bpm-notif-success-color:             @bpm-btn-success-color;
+@bpm-notif-warning-background:        @bpm-btn-warning-bg;
+@bpm-notif-warning-color:             @bpm-btn-warning-color;
+@bpm-notif-danger-background:         @bpm-btn-alert-bg;
+@bpm-notif-danger-color:              @bpm-btn-alert-color;
+@bpm-notif-default-background:        @bpm-default-darker-fill-neutral;
+@bpm-notif-default-color:             @bpm-default-light-text-neutral;
+@bpm-alert-primary-border-color:      @bpm-primary-dark-border-color;
+@bpm-alert-danger-border-color:       @bpm-alert-light-border-color;
+@bpm-alert-warning-border-color:      @bpm-warning-light-border-color;
+@bpm-alert-info-border-color:         @bpm-info-light-border-color;
+@bpm-alert-success-border-color:      @bpm-success-light-border-color;
+@bpm-alert-toast-border:              inherit;
+@bpm-alert-text-align:                inherit;
+@bpm-alert-light-border-color:        desaturate(lighten(spin(@bpm-color-alert, -344), 25%), 31%);
+@bpm-warning-light-border-color:      desaturate(lighten(spin(@bpm-color-warning, -5), 19%), 8%);
+@bpm-info-light-border-color:         lighten(@bpm-color-info, 22%);
+@bpm-success-light-border-color:      saturate(lighten(spin(@bpm-color-success, 26), 27%), 3%);
+/* Migrated Variables - END */
+
+
+/* Migrated Variables - START */
+@bpm-workplace-shell-title-height:    48px;
+@bpm-workplace-shell-title-bg:        @bpm-neutral-darker;
+@bpm-workplace-shell-title-active-bg: @bpm-neutral-darkest;
+@bpm-workplace-shell-title-font-family: @bpm-headings-font-family;
+@bpm-workplace-shell-title-font-weight: @bpm-headings-font-weight;
+@bpm-workplace-shell-title-font-size: @bpm-font-size-base;
+@bpm-workplace-shell-title-color:     @bpm-neutral-lightest;
+@bpm-workplace-shell-title-hover-bg:  @bpm-neutral-darkest;
+@bpm-workplace-shell-title-focus-outline:  @bpm-neutral-lightest;
+@bpm-workplace-shell-sideMenu-width:  315px;
+@bpm-workplace-shell-sideMenu-bg:     @bpm-neutral-darkest;
+@bpm-workplace-shell-sideMenu-active-bg:     @bpm-neutral;
+@bpm-workplace-shell-sideMenu-font-family:     @bpm-headings-font-family;
+@bpm-workplace-shell-sideMenu-font-weight:     @bpm-headings-font-weight;
+@bpm-workplace-shell-sideMenu-font-size:     @bpm-font-size-base;
+@bpm-workplace-shell-sideMenu-color:  @bpm-neutral-lightest;
+@bpm-workplace-shell-sideMenu-secondary-color:  @bpm-neutral-light;
+@bpm-workplace-shell-sideMenu-hover-bg:  @bpm-neutral;
+@bpm-workplace-shell-sideMenu-focus-outline:  @bpm-color-primary;
+@bpm-workplace-actionMenu-bg:         @bpm-neutral-lightest;
+@bpm-workplace-actionMenu-active-bg:  @bpm-neutral-lighter;
+@bpm-workplace-actionMenu-color:      @bpm-neutral-darkest;
+@bpm-workplace-actionMenu-fill:       @bpm-neutral-darker;
+@bpm-workplace-actionMenu-hover:      @bpm-neutral-lighter;
+@bpm-workplace-actionMenu-focus-outline:      @bpm-color-primary;
+/* Migrated Variables - END */
+
+
+/* Migrated Variables - START */
+@bpm-section-header-primary-light-bg: @bpm-color-primary-light;
+@bpm-section-header-primary-dark-bg:  @bpm-color-primary-dark;
+@bpm-section-header-primary-darker-bg:@bpm-color-primary-darker;
+@bpm-section-header-success-light-bg: @bpm-color-success-light;
+@bpm-section-header-success-dark-bg:  @bpm-color-success-dark;
+@bpm-section-header-success-darker-bg:@bpm-color-success-darker;
+@bpm-section-header-info-light-bg:    @bpm-color-info-light;
+@bpm-section-header-info-dark-bg:     @bpm-color-info-dark;
+@bpm-section-header-info-darker-bg:   @bpm-color-info-darker;
+@bpm-section-header-warning-light-bg: @bpm-color-warning-light;
+@bpm-section-header-warning-dark-bg:  @bpm-color-warning-dark;
+@bpm-section-header-warning-darker-bg:@bpm-color-warning-darker;
+@bpm-section-header-alert-light-bg:   @bpm-color-alert-light;
+@bpm-section-header-alert-dark-bg:    @bpm-color-alert-dark;
+@bpm-section-header-alert-darker-bg:  @bpm-color-alert-darker;
+@bpm-alert-primary-bg:                @bpm-color-primary;
+@bpm-alert-primary-light-bg:          @bpm-color-primary-light;;
+@bpm-alert-info-bg:                   @bpm-color-info;
+@bpm-alert-info-light-bg:             @bpm-color-info-light;
+@bpm-alert-success-bg:                @bpm-color-success;
+@bpm-alert-success-light-bg:          @bpm-color-success-light;
+@bpm-alert-warning-bg:                @bpm-color-warning;
+@bpm--alert-warning-light-bg:         @bpm-color-warning-light;
+@bpm-alert-alert-bg:                  @bpm-color-alert;
+@bpm-alert-alert-light-bg:            @bpm-color-alert-light;
+@bpm-badge-border-radius:             10px;
+@bpm-btn-border-radius-large:         @bpm-border-radius-large;
+@bpm-btn-border-radius-small:         @bpm-border-radius-small;
+@bpm-btn-border-radius-xsmall:        @bpm-border-radius-small;
+/* Migrated Variables - END */
+
+
+
+
+/* Date: 2017-06-16 */
+
+/* Theme_Level_Id is a metadata to indicate the theme level of this bpm theme. */ 
+/* This Id will be updated to match the one in the Default BPM Theme in your dependent System Toolkit when using the theme roller */
+// #Theme_Level_Id#605a66d3-d2ee-424f-8cac-ffb918062019#Theme_Level_Id_End#
+
+/* The theme definitions are in LESS format: */
+/* @variableName:             value; */
+/* The value can be a specific value, a formula, another variable, or a combination of these types. */
+
+/* Global Variables*/
+
+/* Neutral colors */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010010","type":"color"}|DE|
+@bpm-neutral-darkest:                      #0d1111;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010020","type":"color"}|DE|
+@bpm-neutral-darker:                       #2d3737;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010030","type":"color"}|DE|
+@bpm-neutral-dark:                         #c8d2d2;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010040","type":"color"}|DE|
+@bpm-neutral:                              #586464;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010050","type":"color"}|DE|
+@bpm-neutral-light:                        #6d7777;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010060","type":"color"}|DE|
+@bpm-neutral-lighter:                      #c8d2d2;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010070","type":"color"}|DE|
+@bpm-neutral-lightest:                     #dfe9e9;                                                    //|EEM|
+
+/* Brand colors */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010080","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-primary-light:                  lighten(desaturate(spin(@bpm-color-primary, 6), 5%), 15%);  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010081","type":"color"}|DE|
+@bpm-color-primary:                        #870052;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010082","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-primary-dark:                   darken(desaturate(spin(@bpm-color-primary, -5), 1%), 9%);   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010083","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-primary-darker:                 darken(desaturate(spin(@bpm-color-primary, -2), 1%), 15%);  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010090","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-info-light:                     lighten(@bpm-color-info, 11%);                              //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010091","type":"color"}|DE|
+@bpm-color-info:                           #989898;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010092","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-info-dark:                      darken(spin(@bpm-color-info, 2), 13%);                      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010093","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-info-darker:                    darken(desaturate(spin(@bpm-color-info, 6), 6%), 21%);      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010100","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-success-light:                  lighten(@bpm-color-success, 9%);                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010101","type":"color"}|DE|
+@bpm-color-success:                        #c8f08f;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010102","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-success-dark:                   darken(desaturate(spin(@bpm-color-success, -6), 7%), 15%);  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010103","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-success-darker:                 darken(desaturate(spin(@bpm-color-success, -3), 5%), 29%);  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010110","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-warning-light:                  lighten(@bpm-color-warning, 9%);                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010111","type":"color"}|DE|
+@bpm-color-warning:                        #fde876;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010112","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-warning-dark:                   darken(desaturate(@bpm-color-warning, 1%), 20%);            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010113","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-warning-darker:                 darken(desaturate(spin(@bpm-color-warning, -2), 3%), 25%);  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010120","type":"color"}|DE|
+@bpm-color-alert-light:                    lighten(saturate(spin(@bpm-color-alert, -9), 20%), 53%);    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010121","type":"color"}|DE|
+@bpm-color-alert:                          #ad1625;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010122","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-alert-dark:                     darken(desaturate(spin(@bpm-color-alert, -5), 1%), 9%);     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010123","type":"color","targetPane":["SP"]}|DE|
+@bpm-color-alert-darker:                   darken(desaturate(spin(@bpm-color-alert, -2), 1%), 15%);    //|EEM|
+
+/* Scaffolding */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010140","type":"color"}|DE|
+@bpm-body-bg:                              #fff;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010143","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-bg:                             fade(@bpm-neutral-darkest, 35%);                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010145","type":"color","targetPane":["SP"]}|DE|
+@bpm-fill-darker:                          #586464;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010146","type":"color","targetPane":["SP"]}|DE|
+@bpm-fill-normal:                          #fff;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010148","type":"color","targetPane":["SP"]}|DE|
+@bpm-border-normal:                        lighten(@bpm-neutral, 2%);                                  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010150","type":"color"}|DE|
+@bpm-link-color:                           @bpm-color-primary;                                         //|EEM|
+@bpm-link-hover-color:                     darken( @bpm-link-color, 15%);
+@bpm-link-decoration:                      none;                                                      
+@bpm-link-hover-decoration:                underline;
+
+/* Typography */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010160","type":"color"}|DE|
+@bpm-text-color:                           #000203;                                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010170","type":"font-family"}|DE|
+@bpm-font-family-sans-serif:               "Helvetica Neue", Helvetica, Arial, sans-serif;             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010180","type":"text"}|DE|
+@bpm-font-size-base:                       14px;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020003","type":"color","targetPane":["SP"]}|DE|
+@bpm-text-color-negative:                  @bpm-neutral-lightest;                                      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020004","type":"color","targetPane":["SP"]}|DE|
+@bpm-text-color-primary:                   darken(@bpm-color-primary, 8%);                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020005","type":"color","targetPane":["SP"]}|DE|
+@bpm-text-color-info:                      darken(@bpm-color-info, 9%);                                //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020006","type":"color","targetPane":["SP"]}|DE|
+@bpm-text-color-success:                   darken(@bpm-color-success, 8%);                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020007","type":"color","targetPane":["SP"]}|DE|
+@bpm-text-color-warning:                   darken(@bpm-color-warning, 8%);                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020008","type":"color","targetPane":["SP"]}|DE|
+@bpm-text-color-alert:                     darken(@bpm-color-alert, 8%);                               //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020010","type":"font-family"}|DE|
+@bpm-font-family-serif:                    Georgia, "Times New Roman", Times, serif;                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020020","type":"font-family"}|DE|
+@bpm-font-family-monospace:                "Courier New", Courier, monospace;                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020030","type":"font-family"}|DE|
+@bpm-font-family-base:                     @bpm-font-family-sans-serif;                                //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020040","type":"text","targetPane":["SP"]}|DE|
+@bpm-font-size-xsmall:                     round(@bpm-font-size-base * 0.85);                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020050","type":"text"}|DE|
+@bpm-font-size-small:                      @bpm-font-size-base/1.25;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020060","type":"text"}|DE|
+@bpm-font-size-large:                      @bpm-font-size-base;                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020080","type":"text","targetPane":["SP"]}|DE|
+@bpm-font-size-xlarge:                     round(@bpm-font-size-base * 1.77);                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020090","type":"text","targetPane":["SP"]}|DE|
+@bpm-font-size-xxlarge:                    round(@bpm-font-size-base * 2.3);                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020100","type":"text","targetPane":["SP"]}|DE|
+@bpm-font-size-xxxlarge:                   round(@bpm-font-size-base * 3.85);                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020101","type":"text"}|DE|
+@bpm-font-size-h1:                         @bpm-font-size-h2*1.25;                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020102","type":"text"}|DE|
+@bpm-font-size-h2:                         @bpm-font-size-h3*1.25;                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020103","type":"text"}|DE|
+@bpm-font-size-h3:                         @bpm-font-size-h4*1.25;                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020104","type":"text"}|DE|
+@bpm-font-size-h4:                         @bpm-font-size-xlarge;                                      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020105","type":"text"}|DE|
+@bpm-font-size-h5:                         @bpm-font-size-base;                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_FONTS","order":"020106","type":"text"}|DE|
+@bpm-font-size-h6:                         @bpm-font-size-small;                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020110","type":"font-weight","targetPane":["SP"]}|DE|
+@bpm-font-weight-slim:                     @bpm-font-weight-normal * 0.75;                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020120","type":"font-weight","targetPane":["SP"]}|DE|
+@bpm-font-weight-normal:                   400;                                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020130","type":"font-weight","targetPane":["SP"]}|DE|
+@bpm-font-weight-semibold:                 @bpm-font-weight-normal * 1.5;                              //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TYPEOGRAPHY","order":"020140","type":"font-weight","targetPane":["SP"]}|DE|
+@bpm-font-weight-bold:                     @bpm-font-weight-normal * 2.5;                              //|EEM|
+                   
+//-- Unit-less `line-height` for use in components such as buttons.
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010190","type":"text"}|DE|
+@bpm-line-height-base:                     1;                                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010200","type":"text"}|DE|
+@bpm-line-height-small:                    0;                                                          //|EEM|
+@bpm-line-height-large:                    1.5;
+
+//-- Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, and so on.
+@bpm-line-height-computed:                 floor((@bpm-font-size-base * @bpm-line-height-base)); // ~20px
+
+@bpm-headings-font-family:                 inherit;
+@bpm-headings-font-weight:                 normal;
+@bpm-headings-line-height:                 2;
+@bpm-headings-color:                       inherit;
+
+/* Grid */
+@bpm-half-gutter-width:                    5px;
+
+/* Components */
+// Default margin for any coach view
+
+@bpm-margin-top:                           6px;     
+@bpm-margin-bottom:                        6px;     
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010210","type":"text"}|DE|
+@bpm-padding-base-vertical:                6px;                                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010220","type":"text"}|DE|
+@bpm-padding-base-horizontal:              12px;                                         //|EEM|
+@bpm-padding-large-vertical:               6px;
+@bpm-padding-large-horizontal:             12px;
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010230","type":"text"}|DE|
+@bpm-padding-small-vertical:               5px;                                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010240","type":"text"}|DE|
+@bpm-padding-small-horizontal:             10px;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010250","type":"text"}|DE|
+@bpm-border-radius-base:                   0px;                                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010255","type":"text"}|DE|
+@bpm-border-radius-large:                  0px;                                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010260","type":"text"}|DE|
+@bpm-border-radius-small:                  0px;                                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010270","type":"color"}|DE|
+@bpm-active-color:                         #fff;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010280","type":"color"}|DE|
+@bpm-active-bg:                            @bpm-color-primary;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010290","type":"color"}|DE|
+@bpm-list-group-bg:                        @bpm-body-bg;                                 //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BASE_SETTINGS","order":"010300","type":"color"}|DE|
+@bpm-list-group-border:                    @bpm-neutral-lightest;                        //|EEM|
+
+/* Form inputs */
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030010","type":"font-family"}|DE|
+@bpm-label-font-family:                    @bpm-font-family-base;                        //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030020","type":"font-weight"}|DE|
+@bpm-label-font-weight:                    bold;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030030","type":"color"}|DE|
+@bpm-label-text-color:                     inherit;                                      //|EEM|
+
+@bpm-label-width:                          25%;                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030040","type":"text"}|DE|
+@bpm-input-bg:                             #fff;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030050","type":"color"}|DE|
+@bpm-input-bg-disabled:                    @bpm-neutral-lightest;                        //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030060","type":"color"}|DE|
+@bpm-input-color:                          @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030063","type":"color","targetPane":["SP"]}|DE|
+@bpm-input-color-disabled:                 fade(@bpm-text-color, 50%);                   //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030070","type":"color"}|DE|
+@bpm-input-border:                         @bpm-neutral-dark;                            //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030072","type":"color","targetPane":["SP"]}|DE|
+@bpm-input-border-disabled:                fade(@bpm-neutral-darkest, 15%);              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030080","type":"text"}|DE|
+@bpm-input-border-radius-base:             @bpm-border-radius-base;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030082","type":"text"}|DE|
+@bpm-input-border-radius-large:            @bpm-border-radius-base;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030083","type":"text"}|DE|
+@bpm-input-border-radius-small:            @bpm-border-radius-small;                     //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030085","type":"color"}|DE|
+@bpm-input-border-focus:                   @bpm-color-primary;                           //|EEM|
+@bpm-input-color-placeholder:              @bpm-neutral-dark;
+
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030090","type":"text","targetPane":["SP"]}|DE|
+@bpm-input-line-height-small:              @bpm-line-height-small * 0.827;               //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030100","type":"text","targetPane":["SP"]}|DE|
+@bpm-input-line-height-base:               @bpm-line-height-base;                        //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_FORM_SETTINGS","order":"030110","type":"text","targetPane":["SP"]}|DE|
+@bpm-input-line-height-large:              @bpm-line-height-base;                        //|EEM|
+
+@bpm-state-success-bg:                     @bpm-color-success;
+@bpm-state-success-text:                   darken(@bpm-state-success-bg, 50%);
+@bpm-state-success-border:                 darken(spin(@bpm-state-success-bg, -10), 5%);
+
+@bpm-state-info-bg:                        @bpm-color-info;
+@bpm-state-info-text:                      darken(@bpm-state-info-bg, 50%);
+@bpm-state-info-border:                    darken(spin(@bpm-state-info-bg, -10), 5%);
+
+@bpm-state-warning-bg:                     @bpm-color-warning;
+@bpm-state-warning-text:                   darken(@bpm-state-warning-bg, 50%);
+@bpm-state-warning-border:                 darken(spin(@bpm-state-warning-bg, -10), 5%);
+
+@bpm-state-alert-bg:                       @bpm-color-alert-light;
+@bpm-state-alert-text:                     darken(@bpm-state-alert-bg, 50%);
+@bpm-state-alert-border:                   darken(spin(@bpm-state-alert-bg, -10), 5%);
+
+/* Tooltip */
+
+@bpm-tooltip-bg:                           #000;
+@bpm-tooltip-color:                        #fff;
+
+/* Button */
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040010","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-default-color:                    @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040020","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-default-bg:                       @bpm-neutral;                                 //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040022","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-default-bg-dark:                  @bpm-neutral-dark;                            //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040024","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-default-bg-darker:                @bpm-neutral-darker;                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040030","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-default-border:                   darken(@bpm-neutral-dark,10%);                //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040040","type":"color"}|DE|
+@bpm-btn-primary-color:                    #fff;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040045","type":"color"}|DE|
+@bpm-btn-primary-bg:                       @bpm-color-primary;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040055","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-primary-bg-dark:                  @bpm-color-primary-dark;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040057","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-primary-bg-darker:                @bpm-color-primary-darker;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040060","type":"color"}|DE|
+@bpm-btn-primary-border:                   darken( @bpm-btn-primary-bg, 5%);             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040070","type":"color"}|DE|
+@bpm-btn-alternate-color:                  @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040072","type":"color"}|DE|
+@bpm-btn-alternate-bg:                     #fff;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040074","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-alternate-bg-dark:                darken(@bpm-btn-alternate-bg, 5%);            //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040076","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-alternate-bg-darker:              darken(@bpm-btn-alternate-bg, 15%);           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040078","type":"color"}|DE|
+@bpm-btn-alternate-border:                 @bpm-neutral-lighter;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040079","type":"color"}|DE|
+@bpm-btn-success-color:                    @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040085","type":"color"}|DE|
+@bpm-btn-success-bg:                       @bpm-color-success;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040087","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-success-bg-dark:                  @bpm-color-success-dark;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040089","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-success-bg-darker:                @bpm-color-success-darker;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040093","type":"color"}|DE|
+@bpm-btn-success-border:                   darken( @bpm-btn-success-bg, 5%);             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040100","type":"color"}|DE|
+@bpm-btn-info-color:                       @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040110","type":"color"}|DE|
+@bpm-btn-info-bg:                          @bpm-color-info;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040113","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-info-bg-dark:                     @bpm-color-info-dark;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040116","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-info-bg-darker:                   @bpm-color-info-darker;                       //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040120","type":"color"}|DE|
+@bpm-btn-info-border:                      darken( @bpm-btn-info-bg, 5%);                //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040130","type":"color"}|DE|
+@bpm-btn-warning-color:                    @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040140","type":"color"}|DE|
+@bpm-btn-warning-bg:                       @bpm-color-warning;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040145","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-warning-bg-dark:                  @bpm-color-warning-dark;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040147","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-warning-bg-darker:                @bpm-color-warning-darker;                    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040150","type":"color"}|DE|
+@bpm-btn-warning-border:                   darken( @bpm-btn-warning-bg, 5%);             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040160","type":"color"}|DE|
+@bpm-btn-alert-color:                      @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040170","type":"color"}|DE|
+@bpm-btn-alert-bg:                         @bpm-color-alert-light;                       //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040175","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-alert-bg-dark:                    @bpm-color-alert-dark;                        //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040177","type":"color","targetPane":["SP"]}|DE|
+@bpm-btn-alert-bg-darker:                  @bpm-color-alert-darker;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040180","type":"color"}|DE|
+@bpm-btn-alert-border:                     darken( @bpm-btn-alert-bg, 5%);               //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040190","type":"font-weight"}|DE|
+@bpm-btn-font-weight:                      normal;                                       //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040200","type":"text","targetPane":["SP"]}|DE|
+@bpm-btn-border-radius:                    @bpm-border-radius-base;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040205","type":"text","targetPane":["SP"]}|DE|
+@bpm-btn-bg-use-gradients:                 false;                                        //|EEM|
+@bpm-btn-scale:                            1.4;                                        
+@bpm-btn-xsmall-padding:                   round(4px * @bpm-btn-scale);                               
+@bpm-btn-small-padding:                    round(4px * @bpm-btn-scale);                               
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_BUTTONS","order":"040230","type":"text","targetPane":["SP"]}|DE|
+@bpm-btn-normal-padding:                   round(7px * @bpm-btn-scale);                  //|EEM|
+@bpm-btn-large-padding:                    round(7px * @bpm-btn-scale);                               
+
+/* Switch */
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050010","type":"color","targetPane":["SP"]}|DE|
+@bpm-switch-default-bg:                    @bpm-color-primary;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050020","type":"color"}|DE|
+@bpm-switch-primary-bg:                    darken( @bpm-color-primary, 5%);              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050025","type":"color"}|DE|
+@bpm-switch-primary-color:                 #fff;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050030","type":"color"}|DE|
+@bpm-switch-alternate-bg:                  #fff;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050040","type":"color"}|DE|
+@bpm-switch-alternate-color:               @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050050","type":"color"}|DE|
+@bpm-switch-success-bg:                    lighten( @bpm-color-success, 5%);             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050060","type":"color"}|DE|
+@bpm-switch-success-color:                 @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050070","type":"color"}|DE|
+@bpm-switch-info-bg:                       lighten( @bpm-color-info, 5%);                //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050080","type":"color"}|DE|
+@bpm-switch-info-color:                    @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050090","type":"color"}|DE|
+@bpm-switch-warning-bg:                    lighten( @bpm-color-warning, 5%);             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050100","type":"color"}|DE|
+@bpm-switch-warning-color:                 @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050110","type":"color"}|DE|
+@bpm-switch-alert-bg:                      darken( @bpm-color-alert-light, 5%);          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050120","type":"color"}|DE|
+@bpm-switch-alert-color:                   @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050125","type":"color","targetPane":["SP"]}|DE|
+@bpm-switch-color:                         @bpm-text-color-negative;                     //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050130","type":"color"}|DE|
+@bpm-switch-border:                        @bpm-neutral-dark;                            //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_CHECKBOX_SWITCH","order":"050140","type":"text"}|DE|
+@bpm-switch-border-radius:                 @bpm-border-radius-base;                      //|EEM|
+
+/* Section */
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060005","type":"text"}|DE|
+@bpm-section-font-size-base:               20px;                                         //|EEM|
+@bpm-section-font-size-small:              @bpm-font-size-h4;
+@bpm-section-font-size-large:              @bpm-font-size-h3;
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060010","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-header-default-color:         lighten(#000, 20%);                           //|EEM|
+@bpm-section-header-default-border:        @bpm-section-default-border;                               
+@bpm-section-header-default-bg:            @bpm-section-default-bg;                                   
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060012","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-default-bg:                   @bpm-fill-normal;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060014","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-default-content-bg:           @bpm-fill-normal;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060015","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-default-border:               darken(@bpm-section-default-bg, 6%);          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060018","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-default-accent-bg:            darken(@bpm-section-default-bg, 6%);          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060020","type":"color"}|DE|
+@bpm-section-header-primary-color:         #fff;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060030","type":"color"}|DE|
+@bpm-section-header-primary-bg:            #420842;                                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060040","type":"color"}|DE|
+@bpm-section-header-primary-border:        #420842;                                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060042","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-primary-bg:                   #420842;                                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060046","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-primary-content-bg:           @bpm-fill-normal;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060048","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-primary-border:               @bpm-section-primary-bg;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060049","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-primary-accent-bg:            @bpm-color-primary;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060050","type":"color"}|DE|
+@bpm-section-header-alternate-color:       @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060060","type":"color"}|DE|
+@bpm-section-header-alternate-bg:          #420842;                                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060070","type":"color"}|DE|
+@bpm-section-header-alternate-border:      #420842;                                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060075","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-alternate-bg:                 #fff;                                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060077","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-alternate-border:             @bpm-neutral-lighter;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060080","type":"color"}|DE|
+@bpm-section-header-success-color:         @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060090","type":"color"}|DE|
+@bpm-section-header-success-bg:            lighten( @bpm-color-success, 5%);             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060100","type":"color"}|DE|
+@bpm-section-header-success-border:        darken( @bpm-section-header-success-bg, 5%);  //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060110","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-success-bg:                   @bpm-color-success;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060112","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-success-content-bg:           @bpm-fill-normal;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060114","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-success-border:               @bpm-section-success-bg;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060116","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-success-accent-bg:            @bpm-color-success-dark;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060118","type":"color"}|DE|
+@bpm-section-header-info-color:            @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060120","type":"color"}|DE|
+@bpm-section-header-info-bg:               lighten( @bpm-neutral-lighter, 5%);           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060130","type":"color"}|DE|
+@bpm-section-header-info-border:           darken( @bpm-section-header-info-bg, 5%);     //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060132","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-info-bg:                      @bpm-neutral-lighter;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060134","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-info-content-bg:              @bpm-fill-normal;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060136","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-info-border:                  @bpm-section-info-bg;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060138","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-info-accent-bg:               @bpm-color-info-dark;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060140","type":"color"}|DE|
+@bpm-section-header-warning-color:         @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060150","type":"color"}|DE|
+@bpm-section-header-warning-bg:            lighten( @bpm-color-warning, 5%);             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060160","type":"color"}|DE|
+@bpm-section-header-warning-border:        darken( @bpm-section-header-warning-bg, 5%);  //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060162","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-warning-bg:                   @bpm-color-warning;                           //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060164","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-warning-content-bg:           @bpm-fill-normal;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060166","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-warning-border:               @bpm-section-warning-bg;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060168","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-warning-accent-bg:            @bpm-color-warning-dark;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060170","type":"color"}|DE|
+@bpm-section-header-alert-color:           @bpm-text-color;                              //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060180","type":"color"}|DE|
+@bpm-section-header-alert-bg:              darken( @bpm-color-alert-light, 5%);          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060190","type":"color"}|DE|
+@bpm-section-header-alert-border:          darken( @bpm-section-header-alert-bg, 5%);    //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060192","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-alert-bg:                     @bpm-color-alert-light;                       //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060194","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-alert-content-bg:             @bpm-fill-normal;                             //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060196","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-alert-border:                 @bpm-section-alert-accent-bg;                 //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060198","type":"color","targetPane":["SP"]}|DE|
+@bpm-section-alert-accent-bg:              darken(@bpm-color-alert-light, 10%);          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060200","type":"text"}|DE|
+@bpm-section-header-border-radius:         @bpm-border-radius-base;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060210","type":"color"}|DE|
+@bpm-section-border:                       @bpm-neutral-lighter;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_SECTION","order":"060220","type":"font-weight"}|DE|
+@bpm-section-header-weight:                @bpm-font-weight-bold;                        //|EEM|
+
+@bpm-section-separator-border:             rgba(0,0,0,0.05);                                          
+
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060230","type":"text","targetPane":["SP"]}|DE|
+@bpm-section-border-radius:                @bpm-border-radius-base;                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060240","type":"text","targetPane":["SP"]}|DE|
+@bpm-section-border-width:                 1px;                                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"060250","type":"text","targetPane":["SP"]}|DE|
+@bpm-section-header-padding:               @bpm-padding-base-vertical + 5px;             //|EEM|
+/* Table  */
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070010","type":"text"}|DE|
+@bpm-table-cell-padding:                   8px;                                          //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070020","type":"color"}|DE|
+@bpm-table-bg:                             transparent;                                  //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070030","type":"color"}|DE|
+@bpm-table-bg-accent:                      #f5f9f9;                                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070040","type":"color"}|DE|
+@bpm-table-bg-hover:                       @bpm-neutral-lightest;                        //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070050","type":"color"}|DE|
+@bpm-table-bg-active:                      @bpm-neutral-lighter;                         //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070060","type":"color"}|DE|
+@bpm-table-bg-select:                      #7cc7ff;                                      //|EEM|
+                                                                                         //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070070","type":"color"}|DE|
+@bpm-table-border-color:                   @bpm-neutral-dark;                            //|EEM|
+
+
+/* Pagination - used by Table coach view  */
+@bpm-pagination-color:                     @bpm-text-color;
+@bpm-pagination-bg:                        #fff;
+@bpm-pagination-border:                    @bpm-neutral-lighter;
+@bpm-pagination-hover-bg:                  @bpm-neutral-lightest;
+@bpm-pagination-hover-color:               @bpm-link-hover-color;
+@bpm-pagination-active-bg:                 @bpm-color-primary;
+@bpm-pagination-active-color:              #fff;
+@bpm-pagination-active-border:             @bpm-color-primary;
+
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070080","type":"color","targetPane":["SP"]}|DE|
+@bpm-table-delete-icon-color:              darken(@bpm-color-alert-darker, 45%);                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070090","type":"text","targetPane":["SP"]}|DE|
+@bpm-table-min-cell-height:                20px;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070100","type":"text","targetPane":["SP"]}|DE|
+@bpm-table-paging-btn-radius:              @bpm-border-radius-base + 1px;                              //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"070110","type":"text","targetPane":["SP"]}|DE|
+@bpm-table-paging-outer-btn-radius:        @bpm-table-paging-btn-radius;                               //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABLE","order":"0700120","type":"text","targetPane":["SP"]}|DE|
+@bpm-table-paging-inner-btn-radius:        @bpm-table-paging-btn-radius;                               //|EEM|
+
+
+/* Tabs */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080010","type":"text"}|DE|
+@bpm-nav-link-padding:                     10px 15px;                                                  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080020","type":"color"}|DE|
+@bpm-nav-tabs-border-color:                @bpm-neutral-dark;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080030","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-default-color:                   @bpm-text-color-negative;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080040","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-default-bg:                      @bpm-color-primary;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080050","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-default-border:                  desaturate(darken(@bpm-active-bg, 10%), 19%);               //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080052","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-default-accent:                  desaturate(lighten(@bpm-active-bg, 40%), 30%);              //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080055","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-default-content-bg:              @bpm-fill-normal;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080060","type":"color"}|DE|
+@bpm-tabs-primary-color:                   #fff;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080065","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-primary-simple-color:            @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080070","type":"color"}|DE|
+@bpm-tabs-primary-bg:                      @bpm-color-primary;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080075","type":"color"}|DE|
+@bpm-tabs-primary-border:                  darken( @bpm-tabs-primary-bg, 5%);                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080080","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-primary-accent:                  desaturate(lighten(@bpm-tabs-primary-bg, 30%), 30%);        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080085","type":"color"}|DE|
+@bpm-tabs-alternate-color:                 @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080090","type":"color"}|DE|
+@bpm-tabs-alternate-bg:                    #fff;                                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080095","type":"color"}|DE|
+@bpm-tabs-alternate-border:                @bpm-neutral-lighter;                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080100","type":"color"}|DE|
+@bpm-tabs-success-color:                   @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080110","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-success-simple-color:            @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080120","type":"color"}|DE|
+@bpm-tabs-success-bg:                      lighten( @bpm-color-success, 5%);                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080130","type":"color"}|DE|
+@bpm-tabs-success-border:                  darken( @bpm-tabs-success-bg, 5%);                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080140","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-success-accent:                  desaturate(lighten(@bpm-tabs-success-bg, 30%), 5%);         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080145","type":"color"}|DE|
+@bpm-tabs-info-color:                      @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080150","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-info-simple-color:               @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080155","type":"color"}|DE|
+@bpm-tabs-info-bg:                         lighten( @bpm-color-info, 5%);                              //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080160","type":"color"}|DE|
+@bpm-tabs-info-border:                     darken( @bpm-tabs-info-bg, 5%);                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080165","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-info-accent:                     desaturate(lighten(@bpm-tabs-info-bg, 25%), 5%);            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080170","type":"color"}|DE|
+@bpm-tabs-warning-color:                   @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080175","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-warning-simple-color:            @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080180","type":"color"}|DE|
+@bpm-tabs-warning-bg:                      lighten( @bpm-color-warning, 5%);                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080185","type":"color"}|DE|
+@bpm-tabs-warning-border:                  darken( @bpm-tabs-warning-bg, 5%);                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080190","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-warning-accent:                  desaturate(lighten(@bpm-tabs-warning-bg, 25%), 5%);         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080195","type":"color"}|DE|
+@bpm-tabs-alert-color:                     @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080200","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-alert-simple-color:              @bpm-text-color;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080205","type":"color"}|DE|
+@bpm-tabs-alert-bg:                        darken( @bpm-color-alert-light, 5%);                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080210","type":"color"}|DE|
+@bpm-tabs-alert-border:                    darken( @bpm-tabs-alert-bg, 5%);                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080215","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-alert-accent:                    desaturate(lighten(@bpm-tabs-alert-bg, 30%), 5%);           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080220","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-inactive-color:                  lighten(@bpm-text-color, 20%);                              //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080225","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-inactive-bg:                     lighten(@bpm-neutral, 50%);                                 //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080230","type":"color","targetPane":["SP"]}|DE|
+@bpm-tabs-inactive-border:                 darken(@bpm-neutral, 6%);                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080235","type":"text"}|DE|
+@bpm-tabs-border-radius:                   @bpm-border-radius-base;                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_TABS","order":"080240","type":"text","targetPane":["SP"]}|DE|
+@bpm-tabs-height:                          38px;                                                       //|EEM|
+/* Notes */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080510","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-default-bg:                      lighten(@bpm-neutral, 2%);                                  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080520","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-default-accent-bg:               @bpm-neutral-dark;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080530","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-default-color:                   lighten(@bpm-text-color, 8%);                               //|EEM|
+
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080540","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-primary-bg:                      lighten(@bpm-color-primary-light, 8%);                      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080550","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-primary-accent-bg:               @bpm-color-primary-dark;                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080560","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-primary-color:                   @bpm-text-color-primary;                                    //|EEM|
+
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080570","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-info-bg:                         @bpm-color-info-light;                                      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080580","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-info-accent-bg:                  @bpm-color-info-dark;                                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080590","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-info-color:                      darken(@bpm-text-color-info,5%);                            //|EEM|
+ 
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080600","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-success-bg:                      @bpm-color-success-light;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080610","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-success-accent-bg:               @bpm-color-success-dark;                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080620","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-success-color:                   darken(@bpm-text-color-success, 5%);                        //|EEM|
+
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080630","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-warning-bg:                      @bpm-color-warning-light;                                   //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080640","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-warning-accent-bg:               @bpm-color-warning-dark;                                    //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080650","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-warning-color:                   darken(@bpm-text-color-warning, 5%);                        //|EEM|
+
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080660","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-alert-bg:                        @bpm-color-alert-light;                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080670","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-alert-accent-bg:                 @bpm-color-alert-dark;                                      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080680","type":"color","targetPane":["SP"]}|DE|
+@bpm-note-alert-color:                     darken(@bpm-text-color-alert,5%);                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_NOTES","order":"080690","type":"text","targetPane":["SP"]}|DE|
+@bpm-note-border-width:                    10px;                                                       //|EEM|
+
+
+/* Progress bars */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090010","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-empty-bg:                    @bpm-neutral-lightest;                                      //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090020","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-default-bg:                  @bpm-neutral-darker;                                        //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090030","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-default-border:              darken(@bpm-neutral-darker,10%);                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090040","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-primary-bg:                  @bpm-color-primary;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090050","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-primary-border:              darken(@bpm-progress-primary-bg, 5%);                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090060","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-info-bg:                     @bpm-color-info-darker;                                     //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090070","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-info-border:                 darken(@bpm-progress-info-bg, 5%);                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090080","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-success-bg:                  @bpm-color-success-darker;                                  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090090","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-success-border:              darken(@bpm-progress-success-bg, 5%);                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090100","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-warning-bg:                  @bpm-color-warning-darker;                                  //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090110","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-warning-border:              darken(@bpm-progress-warning-bg, 5%);                       //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090120","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-alert-bg:                    @bpm-color-alert;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_PROGRESS_AND_SLIDERS","order":"090130","type":"color","targetPane":["SP"]}|DE|
+@bpm-progress-alert-border:                darken(@bpm-progress-alert-bg, 5%);                         //|EEM|
+
+
+/* Menus */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_MENUS","order":"100010","type":"color","targetPane":["SP"]}|DE|
+@bpm-menu-item-active-color:               @bpm-active-color;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_MENUS","order":"100020","type":"color","targetPane":["SP"]}|DE|
+@bpm-menu-item-active-bg:                  @bpm-active-bg;                                             //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_MENUS","order":"100030","type":"text","targetPane":["SP"]}|DE|
+@bpm-menu-border-radius:                   @bpm-border-radius-base + 2;                                //|EEM|
+
+
+/* Alerts - Notifications */
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100110","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-primary-bg:        @bpm-color-primary;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100115","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-primary-color:     @bpm-active-color;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100120","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-info-bg:           @bpm-color-info;                                            //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100125","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-info-color:        @bpm-active-color;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100130","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-success-bg:        @bpm-color-success;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100135","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-success-color:     @bpm-active-color;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100140","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-warning-bg:        @bpm-color-warning;                                         //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100145","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-warning-color:     @bpm-active-color;                                          //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100150","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-danger-bg:         @bpm-color-alert;                                           //|EEM|
+                                                                                                       //|EM|{"group":"PREVIEW_GROUP_ALERTS","order":"100155","type":"color","targetPane":["SP"]}|DE|
+@bpm-modal-alert-header-danger-color:      @bpm-active-color;                                          //|EEM|
+
+
+
+/* Title Bar */
+@bpm-portal-titlebar-bg:                   @bpm-color-primary;
+@bpm-portal-titlebar-font-family:          @bpm-headings-font-family;
+@bpm-portal-titlebar-font-weight:          @bpm-headings-font-weight;
+@bpm-portal-titlebar-font-size:            24px;
+@bpm-portal-titlebar-color:                #ffffff;
+@bpm-portal-titlebar-padding-vertical:     6px;
+@bpm-portal-titlebar-padding-horizontal:   5px;
+
+/* Sidebars */
+@bpm-portal-sidebar-bg:                    @bpm-neutral-darkest;
+@bpm-portal-sidebar-color:                 #ffffff;
+@bpm-portal-sidebar-padding:               0px;
+@bpm-portal-sidebar-font-family:           @bpm-font-family-base;
+@bpm-portal-sidebar-font-weight:           normal;
+@bpm-portal-sidebar-font-size:             1.4em;
+@bpm-portal-sidebar-link-color:            #ffffff;
+@bpm-portal-sidebar-link-hover-color:      darken( @bpm-portal-sidebar-link-color, 15%);
+@bpm-portal-sidebar-link-hover-decoration: @bpm-link-hover-decoration;
+@bpm-portal-sidebar-heading-color:         @bpm-portal-sidebar-color;
+@bpm-portal-sidebar-heading-weight:        normal;
+@bpm-portal-sidebar-heading-size:          1em;
+@bpm-portal-sidebar-separator:             @bpm-neutral-lighter;
+@bpm-portal-sidebar-level1-bg:             @bpm-neutral-dark;
+@bpm-portal-sidebar-level1-font-weight:    normal;
+@bpm-portal-sidebar-level1-font-size:      1.2em;
+@bpm-portal-sidebar-level1-padding:        8px;
+@bpm-portal-sidebar-level2-bg:             @bpm-neutral;
+@bpm-portal-sidebar-level2-font-weight:    normal;
+@bpm-portal-sidebar-level2-font-size:      1em;
+@bpm-portal-sidebar-level2-padding:        15px 25px 15px 15px;
+@bpm-portal-sidebar-level3-bg:             #ffffff;
+@bpm-portal-sidebar-level3-font-weight:    normal;
+@bpm-portal-sidebar-level3-font-size:      @bpm-font-size-base;
+@bpm-portal-sidebar-level3-padding:        0px;
+@bpm-portal-sidebar-content-bg:            @bpm-neutral-lightest;
+@bpm-portal-sidebar-content-padding:       10px;
+@bpm-portal-badge-bg:                      @bpm-neutral-light;
+@bpm-portal-badge-color:                   #ffffff;
+@bpm-portal-badge-link-hover-color:        #ffffff;
+@bpm-portal-badge-font-weight:             bold;
+@bpm-portal-badge-border-radius:           10px;
+
+/* Dialogs */
+@bpm-modal-inner-padding:                  15px;
+@bpm-modal-title-padding:                  15px;
+@bpm-modal-content-bg:                     #ffffff;
+@bpm-modal-content-border-color:           @bpm-neutral-lightest;
+@bpm-modal-backdrop-bg:                    @bpm-neutral-darker;
+@bpm-modal-backdrop-opacity:               0.95;
+@bpm-modal-header-border-color:            @bpm-neutral-lightest;
+@bpm-modal-footer-border-color:            @bpm-neutral-lightest;
+
+/* Task List */
+@bpm-color-priority-5:                     @bpm-color-alert-light;
+@bpm-color-priority-4:                     #ffd4a0;
+@bpm-color-priority-3:                     #fde876;
+@bpm-color-priority-2:                     #c8f08f;
+@bpm-color-priority-1:                     #c0e6ff;
+@bpm-color-ontrack:                        #d9ede5;
+@bpm-color-atrisk:                         #fef4dc;
+@bpm-color-overdue:                        #f9dcdf;
+@bpm-tasklist-padding:                     8px;
+@bpm-tasklist-bg:                          transparent;
+@bpm-tasklist-details-bg:                  #f5f9f9;
+@bpm-tasklist-border-color:                @bpm-neutral-lighter;
+
+/********************************************************************************************
+ ** Bootstrap mapping -- uncomment the below section to use Bootstrap CSS classes directly **
+ ********************************************************************************************/
+ 
+/* MAP - start*/
+@gray-darker:                              @bpm-neutral-darkest;
+@gray-dark:                                @bpm-neutral-darker;
+@gray:                                     @bpm-neutral-dark;
+@gray-light:                               @bpm-neutral-lighter;
+@gray-lighter:                             @bpm-neutral-lightest;
+@brand-primary:                            @bpm-color-primary;
+@brand-info:                               @bpm-color-info;
+@brand-success:                            @bpm-color-success;
+@brand-warning:                            @bpm-color-warning;
+@brand-danger:                             @bpm-color-alert;
+@body-bg:                                  @bpm-body-bg;
+@text-color:                               @bpm-text-color;
+@link-color:                               @bpm-link-color;
+@link-hover-color:                         @bpm-link-hover-color;
+@link-hover-decoration:                    @bpm-link-hover-decoration;
+@font-family-sans-serif:                   @bpm-font-family-sans-serif;
+@font-family-serif:                        @bpm-font-family-serif;
+@font-family-monospace:                    @bpm-font-family-monospace;
+@font-family-base:                         @bpm-font-family-base;
+@font-size-base:                           @bpm-font-size-base;
+@font-size-large:                          @bpm-font-size-base;
+@font-size-small:                          @bpm-font-size-small;
+@padding-base-vertical:                    @bpm-padding-base-vertical;
+@padding-base-horizontal:                  @bpm-padding-base-horizontal;
+@padding-large-vertical:                   @bpm-padding-base-vertical;
+@padding-large-horizontal:                 @bpm-padding-base-horizontal;
+@padding-small-vertical:                   @bpm-padding-small-vertical;
+@padding-small-horizontal:                 @bpm-padding-small-horizontal;
+@border-radius-base:                       @bpm-border-radius-base;
+@border-radius-large:                      @bpm-border-radius-base;
+@border-radius-small:                      @bpm-border-radius-small;
+@component-active-color:                   @bpm-active-color;
+@component-active-bg:                      @bpm-active-bg;
+@list-group-bg:                            @bpm-list-group-bg;
+@list-group-border:                        @bpm-list-group-border;
+@btn-primary-color:                        @bpm-btn-primary-color;
+@btn-primary-bg:                           @bpm-btn-primary-bg;
+@btn-primary-border:                       @bpm-btn-primary-border;
+@btn-default-color:                        @bpm-btn-alternate-color;
+@btn-default-bg:                           @bpm-btn-alternate-bg;
+@btn-default-border:                       @bpm-btn-alternate-border;
+@btn-success-color:                        @bpm-btn-success-color;
+@btn-success-bg:                           @bpm-btn-success-bg;
+@btn-success-border:                       @bpm-btn-success-border;
+@btn-info-color:                           @bpm-btn-info-color;
+@btn-info-bg:                              @bpm-btn-info-bg;
+@btn-info-border:                          @bpm-btn-info-border;
+@btn-warning-color:                        @bpm-btn-warning-color;
+@btn-warning-bg:                           @bpm-btn-warning-bg;
+@btn-warning-border:                       @bpm-btn-warning-border;
+@btn-danger-color:                         @bpm-btn-alert-color;
+@btn-danger-bg:                            @bpm-btn-alert-bg;
+@btn-danger-border:                        @bpm-btn-alert-border;
+@btn-font-weight:                          @bpm-btn-font-weight;
+@font-size-h1:                             @bpm-font-size-h1;
+@font-size-h2:                             @bpm-font-size-h2;
+@font-size-h3:                             @bpm-font-size-h3;
+@font-size-h4:                             @bpm-font-size-h4;
+@font-size-h5:                             @bpm-font-size-h5;
+@font-size-h6:                             @bpm-font-size-h6;
+@line-height-base:                         @bpm-line-height-base;
+@line-height-small:                        @bpm-line-height-small;
+@line-height-large:                        @bpm-line-height-base;
+@line-height-computed:                     @bpm-line-height-computed;
+@headings-font-family:                     @bpm-headings-font-family;
+@headings-font-weight:                     @bpm-headings-font-weight;
+@headings-line-height:                     @bpm-headings-line-height;
+@headings-color:                           @bpm-headings-color;
+@input-bg:                                 @bpm-input-bg;
+@input-bg-disabled:                        @bpm-input-bg-disabled;
+@input-color:                              @bpm-input-color;
+@input-border:                             @bpm-input-border;
+@input-border-radius:                      @bpm-input-border-radius-base;
+@input-border-radius-large:                @bpm-input-border-radius-base;
+@input-border-radius-small:                @bpm-input-border-radius-small;
+@input-border-focus:                       @bpm-input-border-focus;
+@input-color-placeholder:                  @bpm-input-color-placeholder;
+@state-success-text:                       @bpm-state-success-text;
+@state-success-bg:                         @bpm-state-success-bg;
+@state-success-border:                     @bpm-state-success-border;
+@state-info-text:                          @bpm-state-info-text;
+@state-info-bg:                            @bpm-state-info-bg;
+@state-info-border:                        @bpm-state-info-border;
+@state-warning-text:                       @bpm-state-warning-text;
+@state-warning-bg:                         @bpm-state-warning-bg;
+@state-warning-border:                     @bpm-state-warning-border;
+@state-danger-text:                        @bpm-state-alert-text;
+@state-danger-bg:                          @bpm-state-alert-bg;
+@state-danger-border:                      @bpm-state-alert-border;
+@table-cell-padding:                       @bpm-table-cell-padding;
+@table-bg:                                 @bpm-table-bg;
+@table-bg-accent:                          @bpm-table-bg-accent;
+@table-bg-hover:                           @bpm-table-bg-hover;
+@table-bg-active:                          @bpm-table-bg-active;
+@table-border-color:                       @bpm-table-border-color;
+@pagination-color:                         @bpm-pagination-color;
+@pagination-bg:                            @bpm-pagination-bg;
+@pagination-border:                        @bpm-pagination-border;
+@pagination-hover-bg:                      @bpm-pagination-hover-bg;
+@pagination-hover-color:                   @bpm-pagination-hover-color;
+@pagination-active-bg:                     @bpm-pagination-active-bg;
+@pagination-active-color:                  @bpm-pagination-active-color;
+@pagination-active-border:                 @bpm-pagination-active-border;
+@nav-link-padding:                         @bpm-nav-link-padding;
+@nav-tabs-border-color:                    @bpm-nav-tabs-border-color;
+@tooltip-bg:                               @bpm-tooltip-bg;
+@tooltip-color:                            @bpm-tooltip-color;
+
+/*MAP - end */
+
+        
+        
+        

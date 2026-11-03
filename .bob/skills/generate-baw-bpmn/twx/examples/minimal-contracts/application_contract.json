@@ -1,0 +1,11 @@
+{
+  "contractType": "application",
+  "contractVersion": "1.0",
+  "app": {
+    "name": "Sample Request App",
+    "acronym": "SMPREQ",
+    "description": "Test",
+    "snapshot_name": "Generated Initial"
+  },
+  "dependencies": []
+}

@@ -1,0 +1,142 @@
+{
+  "contractType": "process",
+  "contractVersion": "1.0",
+  "target_scenario": {
+    "status": "CONFIRMED",
+    "text": "Requester submits a request, approver approves or rejects.",
+    "source_refs": [
+      "sample"
+    ]
+  },
+  "actors": [
+    {
+      "id": "actor.req",
+      "name": "Requester",
+      "kind": "human",
+      "lane": "Requester",
+      "participant": true
+    },
+    {
+      "id": "actor.app",
+      "name": "Approver",
+      "kind": "human",
+      "lane": "Approver",
+      "participant": true
+    }
+  ],
+  "gateways": [],
+  "sentence_ledger": [
+    {
+      "id": "S-001",
+      "text": "Requester submits a request.",
+      "source": "sample",
+      "actors": [
+        "actor.req"
+      ],
+      "node_ids": [
+        "submit"
+      ],
+      "fields": [
+        "requestName"
+      ],
+      "services": [],
+      "gateways": []
+    },
+    {
+      "id": "S-002",
+      "text": "Approver approves or rejects.",
+      "source": "sample",
+      "actors": [
+        "actor.app"
+      ],
+      "node_ids": [
+        "approve"
+      ],
+      "fields": [
+        "decision"
+      ],
+      "services": [],
+      "gateways": []
+    }
+  ],
+  "processes": [
+    {
+      "name": "Request Process",
+      "lanes": [
+        {
+          "name": "Requester",
+          "system": false
+        },
+        {
+          "name": "Approver",
+          "system": false
+        }
+      ],
+      "source_coverage": [
+        {
+          "id": "SRC-001",
+          "order": 1,
+          "activity": "Submit request",
+          "source": "sample",
+          "kind": "human",
+          "node_ids": [
+            "submit"
+          ],
+          "disposition": "represented"
+        },
+        {
+          "id": "SRC-002",
+          "order": 2,
+          "activity": "Approve request",
+          "source": "sample",
+          "kind": "human",
+          "node_ids": [
+            "approve"
+          ],
+          "disposition": "represented"
+        }
+      ],
+      "variables": [],
+      "nodes": [
+        {
+          "id": "start",
+          "type": "start",
+          "name": "Start",
+          "lane": "Requester"
+        },
+        {
+          "id": "submit",
+          "type": "human",
+          "name": "Submit Request",
+          "lane": "Requester"
+        },
+        {
+          "id": "approve",
+          "type": "human",
+          "name": "Approve Request",
+          "lane": "Approver"
+        },
+        {
+          "id": "done",
+          "type": "end",
+          "name": "Completed",
+          "lane": "Approver"
+        }
+      ],
+      "flows": [
+        {
+          "from": "start",
+          "to": "submit"
+        },
+        {
+          "from": "submit",
+          "to": "approve"
+        },
+        {
+          "from": "approve",
+          "to": "done"
+        }
+      ]
+    }
+  ]
+}

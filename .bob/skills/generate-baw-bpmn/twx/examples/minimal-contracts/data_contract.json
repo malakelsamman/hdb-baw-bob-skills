@@ -1,0 +1,57 @@
+{
+  "contractType": "data",
+  "contractVersion": "1.0",
+  "variables": [
+    {
+      "id": "var.requestName",
+      "name": "requestName",
+      "type": "String",
+      "scope": "private"
+    },
+    {
+      "id": "var.decision",
+      "name": "decision",
+      "type": "String",
+      "scope": "private"
+    }
+  ],
+  "business_objects": [],
+  "mappings": [],
+  "comment_history": {
+    "id": "bo.commentHistory",
+    "name": "Comment History Entry",
+    "variable_name": "commentHistory",
+    "cardinality": "list",
+    "native_status": "SUPPORTED",
+    "fields": [
+      {
+        "name": "occurredAt",
+        "type": "Date"
+      },
+      {
+        "name": "fromActor",
+        "type": "String"
+      },
+      {
+        "name": "toActor",
+        "type": "String"
+      },
+      {
+        "name": "fromCoach",
+        "type": "String"
+      },
+      {
+        "name": "toCoach",
+        "type": "String"
+      },
+      {
+        "name": "action",
+        "type": "String"
+      },
+      {
+        "name": "comment",
+        "type": "String"
+      }
+    ]
+  }
+}

@@ -221,7 +221,7 @@ humans.
 
 #### [ARTIFACT_NAME] — line N
 **Rule:** HARD-01 — Hardcoded credential
-**Finding:** `password = "hunter2"` — the script assigns a string literal directly to a
+**Finding:** `password = "<literal-string>"` — the script assigns a string literal directly to a
   variable whose name suggests a credential.
 **Fix:** Store credentials in a BAW managed team/environment variable, a process
   variable initialized from a system configuration property, or an external secrets

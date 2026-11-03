@@ -54,9 +54,9 @@ The WLE API paths are appended to the base URL **without** the context root pref
 Pass `Authorization: Basic <base64(username:password)>` in the request header.
 
 ```bash
-# Encode credentials
-echo -n "admin:mypassword" | base64
-# → YWRtaW46bXlwYXNzd29yZA==
+# Encode credentials from the environment (values come from .env; never type them inline)
+printf '%s:%s' "$BAW_USERNAME" "$BAW_PASSWORD" | base64
+# → <base64 of username:password>
 ```
 
 ### LTPA token (on-premises SSO)
@@ -94,7 +94,7 @@ Content-Type: multipart/form-data
 ```bash
 curl -X POST \
   "https://baw.example.com/bas/ops/std/bpm/containers/install" \
-  -H "Authorization: Basic YWRtaW46bXlwYXNzd29yZA==" \
+  -H "Authorization: Basic $(printf '%s:%s' "$BAW_USERNAME" "$BAW_PASSWORD" | base64)" \
   -F "file=@/tmp/MYAPP_v3.0.twx"
 ```
 
@@ -130,7 +130,7 @@ Returns the current state and metadata of a specific snapshot. Use after install
 ```bash
 curl -X GET \
   "https://baw.example.com/bas/ops/std/bpm/containers/MYAPP/versions/3.0" \
-  -H "Authorization: Basic YWRtaW46bXlwYXNzd29yZA=="
+  -H "Authorization: Basic $(printf '%s:%s' "$BAW_USERNAME" "$BAW_PASSWORD" | base64)"
 ```
 
 **Success response — HTTP 200:**
@@ -176,7 +176,7 @@ Content-Type: application/json
 ```bash
 curl -X POST \
   "https://baw.example.com/bas/std/bpm/containers/MYAPP/versions/0.9.3/activate" \
-  -H "Authorization: Basic YWRtaW46bXlwYXNzd29yZA==" \
+  -H "Authorization: Basic $(printf '%s:%s' "$BAW_USERNAME" "$BAW_PASSWORD" | base64)" \
   -H "Content-Type: application/json"
 ```
 
@@ -214,7 +214,7 @@ Removes the snapshot from the active execution path. Running instances already o
 ```bash
 curl -X POST \
   "https://baw.example.com/bas/std/bpm/containers/MYAPP/versions/0.9.3/deactivate" \
-  -H "Authorization: Basic YWRtaW46bXlwYXNzd29yZA==" \
+  -H "Authorization: Basic $(printf '%s:%s' "$BAW_USERNAME" "$BAW_PASSWORD" | base64)" \
   -H "Content-Type: application/json"
 ```
 
@@ -254,7 +254,7 @@ Permanently removes the snapshot from the BAW server. You cannot undo this actio
 ```bash
 curl -X DELETE \
   "https://baw.example.com/bas/ops/std/bpm/containers/MYAPP/versions/0.9.3" \
-  -H "Authorization: Basic YWRtaW46bXlwYXNzd29yZA=="
+  -H "Authorization: Basic $(printf '%s:%s' "$BAW_USERNAME" "$BAW_PASSWORD" | base64)"
 ```
 
 **Success response — HTTP 200:**
@@ -374,7 +374,7 @@ Returns the environment variables configured for a specific snapshot.
 ```bash
 curl -X GET \
   "https://baw.example.com/bas/ops/std/bpm/containers/MYAPP/versions/3.0/env_vars" \
-  -H "Authorization: Basic YWRtaW46bXlwYXNzd29yZA=="
+  -H "Authorization: Basic $(printf '%s:%s' "$BAW_USERNAME" "$BAW_PASSWORD" | base64)"
 ```
 
 **Success response — HTTP 200:**
@@ -460,7 +460,7 @@ Copies the stored environment variable values from a **source** snapshot to a **
 ```bash
 curl -X POST \
   "https://baw.example.com/bas/ops/std/bpm/containers/MYAPP/versions/1.0/env_vars/sync?target_version=2.0" \
-  -H "Authorization: Basic YWRtaW46bXlwYXNzd29yZA==" \
+  -H "Authorization: Basic $(printf '%s:%s' "$BAW_USERNAME" "$BAW_PASSWORD" | base64)" \
   -H "Content-Type: application/json"
 ```
 
